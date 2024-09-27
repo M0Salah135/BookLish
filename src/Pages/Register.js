@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Col, Container, NavLink } from "react-bootstrap";
+import { Col, Container} from "react-bootstrap";
 import styled from "styled-components";
 import { Row } from "react-bootstrap";
 import loginImg from  "../Assets/login.jpg"
