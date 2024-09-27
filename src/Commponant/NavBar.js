@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
@@ -8,12 +9,12 @@ function NavBar() {
       <>
         <Navbar bg="dark" data-bs-theme="dark">
           <Container>
-            <Navbar.Brand href="#home">Bookish</Navbar.Brand>
+            <Navbar.Brand as= {Link} to="/">Bookish</Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Books</Nav.Link>
-              <Nav.Link href="#pricing">Login</Nav.Link>
-              <Nav.Link href="#pricing">SignUp</Nav.Link>
+              <Nav.Link as= {Link} to="/">Home</Nav.Link>
+              <Nav.Link as= {Link} to="/products">Books</Nav.Link>
+              <Nav.Link as= {Link} to="/login">Login</Nav.Link>
+              <Nav.Link as= {Link} to="/register">SignUp</Nav.Link>
              
             </Nav>
           </Container>
