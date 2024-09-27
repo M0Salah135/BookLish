@@ -1,4 +1,208 @@
 {
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "password": "hashed_password",
+        "role": "admin",
+        "cart": [
+          {
+            "bookId": 101,
+            "title": "The Great Gatsby",
+            "quantity": 1,
+            "price": 10.99,
+            "coverImage": "https://example.com/covers/great-gatsby.jpg"
+          },
+          {
+            "bookId": 102,
+            "title": "1984",
+            "quantity": 2,
+            "price": 8.99,
+            "coverImage": "https://example.com/covers/1984.jpg"
+          }
+        ],
+        "wishlist": [
+          {
+            "bookId": 103,
+            "title": "To Kill a Mockingbird",
+            "price": 12.49,
+            "coverImage": "https://example.com/covers/to-kill-a-mockingbird.jpg"
+          },
+          {
+            "bookId": 104,
+            "title": "Pride and Prejudice",
+            "price": 9.99,
+            "coverImage": "https://example.com/covers/pride-and-prejudice.jpg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [
+          {
+            "bookId": 105,
+            "title": "The Catcher in the Rye",
+            "quantity": 1,
+            "price": 11.99,
+            "coverImage": "https://example.com/covers/catcher-in-the-rye.jpg"
+          }
+        ],
+        "wishlist": [
+          {
+            "bookId": 106,
+            "title": "Moby-Dick",
+            "price": 13.49,
+            "coverImage": "https://example.com/covers/moby-dick.jpg"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [],
+        "wishlist": []
+      },
+      {
+        "id": 4,
+        "name": "Bob Brown",
+        "email": "bob.brown@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [
+          {
+            "bookId": 107,
+            "title": "War and Peace",
+            "quantity": 1,
+            "price": 14.99,
+            "coverImage": "https://example.com/covers/war-and-peace.jpg"
+          }
+        ],
+        "wishlist": []
+      },
+      {
+        "id": 5,
+        "name": "Emma Wilson",
+        "email": "emma.wilson@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [],
+        "wishlist": [
+          {
+            "bookId": 108,
+            "title": "The Hobbit",
+            "price": 11.49,
+            "coverImage": "https://example.com/covers/the-hobbit.jpg"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Charlie Davis",
+        "email": "charlie.davis@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [
+          {
+            "bookId": 109,
+            "title": "Crime and Punishment",
+            "quantity": 1,
+            "price": 13.99,
+            "coverImage": "https://example.com/covers/crime-and-punishment.jpg"
+          }
+        ],
+        "wishlist": []
+      },
+      {
+        "id": 7,
+        "name": "Olivia Martinez",
+        "email": "olivia.martinez@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [],
+        "wishlist": [
+          {
+            "bookId": 110,
+            "title": "Brave New World",
+            "price": 9.99,
+            "coverImage": "https://example.com/covers/brave-new-world.jpg"
+          },
+          {
+            "bookId": 111,
+            "title": "The Lord of the Rings",
+            "price": 15.49,
+            "coverImage": "https://example.com/covers/lord-of-the-rings.jpg"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "William Clark",
+        "email": "william.clark@example.com",
+        "password": "hashed_password",
+        "role": "admin",
+        "cart": [
+          {
+            "bookId": 112,
+            "title": "The Odyssey",
+            "quantity": 1,
+            "price": 10.99,
+            "coverImage": "https://example.com/covers/the-odyssey.jpg"
+          }
+        ],
+        "wishlist": []
+      },
+      {
+        "id": 9,
+        "name": "Sophia Miller",
+        "email": "sophia.miller@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [
+          {
+            "bookId": 113,
+            "title": "The Iliad",
+            "quantity": 2,
+            "price": 12.99,
+            "coverImage": "https://example.com/covers/the-iliad.jpg"
+          }
+        ],
+        "wishlist": [
+          {
+            "bookId": 114,
+            "title": "Wuthering Heights",
+            "price": 10.99,
+            "coverImage": "https://example.com/covers/wuthering-heights.jpg"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Lucas Thompson",
+        "email": "lucas.thompson@example.com",
+        "password": "hashed_password",
+        "role": "user",
+        "cart": [],
+        "wishlist": [
+          {
+            "bookId": 115,
+            "title": "Anna Karenina",
+            "price": 14.99,
+            "coverImage": "https://example.com/covers/anna-karenina.jpg"
+          }
+        ]
+      }
+    ]
+  
+  
+    ,  
     "books": [
       {
         "id": 1,
