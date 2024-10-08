@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
 
     // Fetch user data from JSON server
-    fetch("http://localhost:5000/users")
+    fetch("http://localhost:8000/users")
     .then((response) => response.json())
     .then((users) => {
       // Find the user based on email and password

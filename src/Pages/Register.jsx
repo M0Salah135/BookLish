@@ -33,7 +33,7 @@ const Register = () => {
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    fetch("http://localhost:5000/users")
+    fetch("http://localhost:8000/users")
       .then((response) => response.json())
       .then((users) => {
         // Find the user based on email and password
@@ -47,7 +47,7 @@ const Register = () => {
 
         }
         else {
-          fetch("http://localhost:5000/users", {
+          fetch("http://localhost:8000/users", {
             method: "POST", // Using the POST method to push data
             headers: {
               "Content-Type": "application/json",

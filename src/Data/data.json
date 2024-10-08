@@ -20,11 +20,18 @@
       "lastname": "ma",
       "email": "eng.m.maro@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "48ae",
+      "firstname": "admin",
+      "lastname": "admin",
+      "email": "admin@admin",
+      "password": "admin"
     }
   ],
   "books": [
     {
-      "id": 1,
+      "id": "1",
       "title": "The Shadow of Time",
       "author": "Arthur Blackwood",
       "category": "Science Fiction",
@@ -34,7 +41,7 @@
       "imageUrl": "https://example.com/images/shadow-of-time.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Winds of the North",
       "author": "Sylvia Brooks",
       "category": "Adventure",
@@ -44,7 +51,7 @@
       "imageUrl": "https://example.com/images/winds-of-the-north.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "The Forgotten Empire",
       "author": "James Crowley",
       "category": "Historical Fiction",
@@ -54,7 +61,7 @@
       "imageUrl": "https://example.com/images/forgotten-empire.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Whispers in the Dark",
       "author": "Elaine Moon",
       "category": "Horror",
@@ -64,7 +71,7 @@
       "imageUrl": "https://example.com/images/whispers-in-the-dark.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Journey to the Abyss",
       "author": "Mason Clarke",
       "category": "Fantasy",
@@ -74,7 +81,7 @@
       "imageUrl": "https://example.com/images/journey-to-the-abyss.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "The Last Martian",
       "author": "Clara Green",
       "category": "Science Fiction",
@@ -84,7 +91,7 @@
       "imageUrl": "https://example.com/images/last-martian.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Murder at Midnight",
       "author": "Louis Clark",
       "category": "Mystery",
@@ -94,7 +101,7 @@
       "imageUrl": "https://example.com/images/murder-at-midnight.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "The Enchanted Forest",
       "author": "Diana Wynn",
       "category": "Fantasy",
@@ -104,7 +111,7 @@
       "imageUrl": "https://example.com/images/enchanted-forest.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Secrets of the Pharaoh",
       "author": "Brian Taylor",
       "category": "Historical Fiction",
@@ -114,7 +121,7 @@
       "imageUrl": "https://example.com/images/secrets-of-the-pharaoh.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Rise of the Machines",
       "author": "Emma White",
       "category": "Science Fiction",
@@ -124,7 +131,7 @@
       "imageUrl": "https://example.com/images/rise-of-machines.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "The Silent Observer",
       "author": "Nancy Drew",
       "category": "Thriller",
@@ -134,7 +141,7 @@
       "imageUrl": "https://example.com/images/silent-observer.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "A War to End All Wars",
       "author": "David Johnson",
       "category": "Historical Fiction",
@@ -144,7 +151,7 @@
       "imageUrl": "https://example.com/images/war-to-end-all-wars.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "The Queen's Gambit",
       "author": "Isabelle Ross",
       "category": "Fantasy",
@@ -154,7 +161,7 @@
       "imageUrl": "https://example.com/images/queens-gambit.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Into the Abyss",
       "author": "Kyle Adams",
       "category": "Adventure",
@@ -164,7 +171,7 @@
       "imageUrl": "https://example.com/images/into-the-abyss.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Heart of the Storm",
       "author": "Hannah Lee",
       "category": "Romance",
@@ -174,7 +181,7 @@
       "imageUrl": "https://example.com/images/heart-of-the-storm.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "The Lost Key",
       "author": "William Hunt",
       "category": "Mystery",
@@ -184,7 +191,7 @@
       "imageUrl": "https://example.com/images/lost-key.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Descent into Madness",
       "author": "Rebecca Sharp",
       "category": "Horror",
@@ -194,7 +201,7 @@
       "imageUrl": "https://example.com/images/descent-into-madness.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "The Art of War",
       "author": "Sun Tzu",
       "category": "Philosophy",
@@ -204,7 +211,7 @@
       "imageUrl": "https://example.com/images/art-of-war.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "The Alchemist",
       "author": "Paulo Coelho",
       "category": "Adventure",
@@ -214,7 +221,7 @@
       "imageUrl": "https://example.com/images/alchemist.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "The Infinite Loop",
       "author": "Terry Scott",
       "category": "Science Fiction",
