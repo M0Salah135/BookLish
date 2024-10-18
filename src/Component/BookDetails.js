@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { useParams } from "react-router-dom";
 import { BooksContext } from "../Store/BooksContext";
 import CustmerCards from "./BookCard";
+import CustmerNavbar from "./CustmerNavbar";
 
 function BookDetails() {
   const params = useParams();
@@ -33,14 +34,14 @@ function BookDetails() {
     books[productIdx] = newProductObject;
 
     updateBooks([...books]);
-    setComment("");
-    console.log(commentArray);
+    setComment('');
   };
 
   if (!founded) return <Container>No found</Container>;
 
   return (
     <div>
+    <CustmerNavbar darkTheme={true}/>
       <Stack direction="horizontal" gap={2} className="justify-content-center">
         <CustmerCards
           title={founded.title}
@@ -54,6 +55,7 @@ function BookDetails() {
           <Form.Control
             type="text"
             id="comment"
+            value={comment}
             onChange={(event) => {
               setComment(event.target.value);
             }}
