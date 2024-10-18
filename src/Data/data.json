@@ -38,7 +38,7 @@
       "price": 19.99,
       "description": "A thrilling journey through space and time where humanity's future depends on one man's choices.",
       "stock": 12,
-      "imageUrl": "https://example.com/images/shadow-of-time.jpg"
+      "imageUrl": "https://books.google.com.eg/books?id=mrgCAAAAQAAJ&pg=PA106&dq=The+Shadow+of+Time+-+Arthur+Blackwood&hl=en&newbks=1&newbks_redir=1&sa=X&ved=2ahUKEwj0q8GLiZiJAxVoSKQEHWi1CXAQ6wF6BAgMEAE"
     },
     {
       "id": "2",
@@ -48,7 +48,7 @@
       "price": 14.99,
       "description": "An epic tale of survival and resilience in the harsh northern wilderness.",
       "stock": 8,
-      "imageUrl": "https://example.com/images/winds-of-the-north.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "3",
@@ -58,7 +58,7 @@
       "price": 17.99,
       "description": "A gripping story about an ancient empire lost in the sands of time.",
       "stock": 5,
-      "imageUrl": "https://example.com/images/forgotten-empire.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "4",
@@ -68,7 +68,7 @@
       "price": 10.99,
       "description": "A chilling tale of hauntings and nightmares in a remote village.",
       "stock": 20,
-      "imageUrl": "https://example.com/images/whispers-in-the-dark.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "5",
@@ -78,7 +78,7 @@
       "price": 15.99,
       "description": "An extraordinary quest to the depths of the world where ancient powers lie.",
       "stock": 15,
-      "imageUrl": "https://example.com/images/journey-to-the-abyss.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "6",
@@ -88,7 +88,7 @@
       "price": 13.99,
       "description": "In a distant future, the last surviving Martian seeks to preserve their dying race.",
       "stock": 7,
-      "imageUrl": "https://example.com/images/last-martian.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "7",
@@ -98,7 +98,7 @@
       "price": 11.99,
       "description": "A detective must unravel a web of lies before another victim falls.",
       "stock": 10,
-      "imageUrl": "https://example.com/images/murder-at-midnight.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "8",
@@ -108,7 +108,7 @@
       "price": 16.99,
       "description": "A young girl stumbles upon a magical forest filled with wonder and danger.",
       "stock": 22,
-      "imageUrl": "https://example.com/images/enchanted-forest.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "9",
@@ -118,7 +118,7 @@
       "price": 18.99,
       "description": "An archaeologist uncovers a tomb that hides more than just treasure.",
       "stock": 9,
-      "imageUrl": "https://example.com/images/secrets-of-the-pharaoh.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "10",
@@ -128,7 +128,7 @@
       "price": 12.99,
       "description": "In a world where AI controls everything, one woman fights for freedom.",
       "stock": 11,
-      "imageUrl": "https://example.com/images/rise-of-machines.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "11",
@@ -138,7 +138,7 @@
       "price": 9.99,
       "description": "A chilling psychological thriller where nothing is as it seems.",
       "stock": 25,
-      "imageUrl": "https://example.com/images/silent-observer.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "12",
@@ -148,7 +148,7 @@
       "price": 17.99,
       "description": "The untold story of the soldiers who fought in the trenches of World War I.",
       "stock": 13,
-      "imageUrl": "https://example.com/images/war-to-end-all-wars.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "13",
@@ -158,7 +158,7 @@
       "price": 14.99,
       "description": "A young sorceress must outwit her enemies to claim her rightful throne.",
       "stock": 14,
-      "imageUrl": "https://example.com/images/queens-gambit.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "14",
@@ -168,7 +168,7 @@
       "price": 15.99,
       "description": "A deep-sea diver discovers a hidden world beneath the ocean's surface.",
       "stock": 6,
-      "imageUrl": "https://example.com/images/into-the-abyss.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "15",
@@ -178,7 +178,7 @@
       "price": 13.99,
       "description": "Two strangers find love amidst a devastating storm that changes their lives forever.",
       "stock": 30,
-      "imageUrl": "https://example.com/images/heart-of-the-storm.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "16",
@@ -188,7 +188,7 @@
       "price": 11.99,
       "description": "An ancient key unlocks secrets that were meant to stay hidden.",
       "stock": 19,
-      "imageUrl": "https://example.com/images/lost-key.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "17",
@@ -198,7 +198,7 @@
       "price": 10.99,
       "description": "A psychological horror that explores the thin line between sanity and madness.",
       "stock": 21,
-      "imageUrl": "https://example.com/images/descent-into-madness.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "18",
@@ -208,7 +208,7 @@
       "price": 9.99,
       "description": "The timeless military strategy text that has influenced leaders for centuries.",
       "stock": 50,
-      "imageUrl": "https://example.com/images/art-of-war.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "19",
@@ -218,7 +218,7 @@
       "price": 12.99,
       "description": "A philosophical novel that follows a young shepherd on his journey to find treasure.",
       "stock": 40,
-      "imageUrl": "https://example.com/images/alchemist.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     },
     {
       "id": "20",
@@ -228,7 +228,7 @@
       "price": 14.99,
       "description": "A coder trapped in a virtual reality must escape before the system crashes forever.",
       "stock": 17,
-      "imageUrl": "https://example.com/images/infinite-loop.jpg"
+      "imageUrl": "https://placehold.co/600x400"
     }
   ]
 }

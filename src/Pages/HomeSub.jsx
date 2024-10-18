@@ -1,18 +1,17 @@
 import CustmerCover from "../Component/CustmerCover";
 import CustmerNavbar from "../Component/CustmerNavbar";
-import BooksList from "../Pages/BooksList";
+import BooksList from "./BooksList";
 
 
 
 
-function Home() {
+function HomeSub() {
     return (
         <div>
-            <CustmerNavbar />
-            <CustmerCover />
+            <CustmerNavbar darkTheme={true}/>
             <BooksList/>
         </div>
     );
 }
 
-export default Home;
+export default HomeSub;
