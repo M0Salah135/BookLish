@@ -16,50 +16,58 @@ function BookDetails() {
   const addComment = () => {
     const commentArray = founded.comment
       ? [
-          ...founded.comment,
-          {
-            title: comment,
-            date: new Date(),
-          },
-        ]
+        {
+          title: comment,
+          date: new Date(),
+        },
+        ...founded.comment,
+      ]
       : [
-          {
-            title: comment,
-            date: new Date(),
-          },
-        ];
+        {
+          title: comment,
+          date: new Date(),
+        },
+      ];
 
     const newProductObject = { ...founded, comment: commentArray };
     books[productIdx] = newProductObject;
 
     updateBooks([...books]);
+    setComment("");
+    console.log(commentArray);
   };
 
   if (!founded) return <Container>No found</Container>;
 
   return (
     <div>
-      <CustmerCards
-        title={founded.title}
-        price={founded.price}
-        description={founded.description}
-        imageUrl={founded.imageUrl}
-      />
-      <Stack direction="vertical" gap={2}>
-        <Form.Label htmlFor="comment">Comment</Form.Label>
-        <Form.Control
-          type="text"
-          id="comment"
-          onChange={(event) => {
-            setComment(event.target.value);
-          }}
+      <Stack direction="horizontal" gap={2} className="justify-content-center">
+        <CustmerCards
+          title={founded.title}
+          price={founded.price}
+          description={founded.description}
+          imageUrl={founded.imageUrl}
+          id={founded.id}
         />
-        <Button variant="primary" onClick={addComment}>
-          Add comment
-        </Button>
-        {founded.comment?.map((item, index) => (
-          <p key={index}>{item.title}</p>
-        ))}
+        <Stack direction="vertical" gap={2} className="align-items-center">
+          <Form.Label htmlFor="comment">Comment</Form.Label>
+          <Form.Control
+            type="text"
+            id="comment"
+            onChange={(event) => {
+              setComment(event.target.value);
+            }}
+          />
+          <Button variant="primary" className="w-50" onClick={addComment}>
+            Add comment
+          </Button>
+          {founded.comment?.map((item, index) => (
+            <Stack direction="horizontal" gap={2} key={index}>
+              <p className="w-50 text-left">{item.title}</p>
+              <p className="w-20 text-right">{item.date.toLocaleDateString()}</p>
+            </Stack>
+          ))}
+        </Stack>
       </Stack>
     </div>
   );

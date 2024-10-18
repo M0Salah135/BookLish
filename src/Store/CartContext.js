@@ -38,6 +38,20 @@ const CartProvider = ({ children }) => {
         setCart(newCart);
       };
     
+
+      const decreasCount = (product) => {
+        const idx = cart.findIndex((_product) => _product.title === product.title);
+        const newCart = [...cart];
+        if (idx > -1 && newCart[idx].quantity > 1) {
+          newCart[idx].quantity--;
+        } else if (idx > -1 && newCart[idx].quantity === 1) {
+          newCart.splice(idx, 1);
+        }
+        localStorage.setItem("ucart", JSON.stringify(newCart));
+        setCart(newCart);
+      };
+    
+    
     
       useEffect(() => {
         // initial render -> get the first data from localstorage
@@ -52,7 +66,7 @@ const CartProvider = ({ children }) => {
       }, []);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, wishlist, addToWishlist, removeFromWishlist }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, wishlist, addToWishlist, removeFromWishlist, decreasCount }}>
             {children}
         </CartContext.Provider>
     );

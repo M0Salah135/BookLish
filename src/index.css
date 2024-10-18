@@ -61,3 +61,12 @@ h1{
       cursor: pointer;
       transition: 0.2s ease-in;
   }
+
+
+  .square-img {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  

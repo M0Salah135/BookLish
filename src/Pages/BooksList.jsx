@@ -17,9 +17,9 @@ function BooksList() {
             <Container className="pt-5" BackgroundColor="Orange">
 
                 <Row xs={1} md={2} lg={4} className="g-4">
-                    {books.map((iteam, idx, arr) => (
+                    {books.map((item, idx, arr) => (
                         <Col key={idx}>
-                            <BookCard title={iteam.title} price={iteam.price} description={iteam.description} imageUrl={iteam.imageUrl} id={iteam.id} />
+                            <BookCard title={item.title} price={item.price} description={item.description} imageUrl={item.imageUrl} id={item.id} />
                         </Col>
                     ))}
                 </Row>

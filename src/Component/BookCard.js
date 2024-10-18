@@ -42,7 +42,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
             <Button
               variant="danger"
               onClick={() => {
-                const productDetails = { title, imageUrl, description, price };
+                const productDetails = { title, imageUrl, description, price,id  };
                 removeFromWishlist(productDetails);
               }}
             >
@@ -52,7 +52,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
             <Button
               variant="primary"
               onClick={() => {
-                const productDetails = { title, imageUrl, description, price };
+                const productDetails = { title, imageUrl, description, price,id  };
                 addToWishlist(productDetails);
               }}
             >
@@ -60,7 +60,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
             </Button>
           )}
 
-          <Button variant="secondary" as={Link} to={`book/${id}`}>
+          <Button variant="secondary" as={Link} to={`../book/${id}`}>
             Details
           </Button>
         </Stack>
