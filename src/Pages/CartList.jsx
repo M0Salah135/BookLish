@@ -1,13 +1,11 @@
-import { useContext, useState } from 'react';
-import Badge from 'react-bootstrap/Badge';
+import { useContext, useMemo, useState } from 'react';
+import { ButtonGroup, Container, Stack, ToggleButton } from 'react-bootstrap';
+import Button from 'react-bootstrap/esm/Button';
 import Image from "react-bootstrap/Image";
 import ListGroup from 'react-bootstrap/ListGroup';
-import { CartContext } from '../Store/CartContext';
-import Button from 'react-bootstrap/esm/Button';
-import { useNavigate } from 'react-router-dom';
-import { useMemo } from 'react';
-import { ButtonGroup, Container, Stack, ToggleButton } from 'react-bootstrap';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../Store/CartContext';
 
 
 

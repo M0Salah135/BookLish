@@ -1,45 +1,34 @@
 import React, { useState } from "react";
-import { Col, Container } from "react-bootstrap";
-import styled from "styled-components";
-import { Row } from "react-bootstrap";
-import loginImg from "../Assets/login.jpg";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import CustmerNavbar from "../Component/CustmerNavbar";
+import styled from "styled-components";
+import loginImg from "../Assets/login.jpg";
+import data from "../Data/data";
+import { useAuth } from '../Store/AuthContext';
+
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const users = data.users;
 
-    // Fetch user data from JSON server
-    fetch("http://localhost:8000/users")
-    .then((response) => response.json())
-    .then((users) => {
-      // Find the user based on email and password
-      const user = users.find(
-        (user) => user.email === email && user.password === password
-      );
-      alert(email);
+    const user = users.find(u => u.email === email && u.password === password);
+    if (user) {
+      login(user);
+      navigate('/'); // Redirect to home page after login
+    } else {
+      alert('Invalid credentials');
+    }
+  };
 
-      if (user) {
-        alert(`Welcome back, ${user.firstname}!`);
-        // Redirect to dashboard or another page after successful login
-        navigate("/");
-      } else {
-        alert("Invalid email or password. Please try again.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error fetching users:", error);
-    });
-};
+
   return (
-    <div style={{backgroundColor:"rgb(119 150 162)"}}>
-      <CustmerNavbar />
+    <div>
       <Container fluid style={{ height: "100vh" }}>
         <Row>
           <Col>
@@ -51,7 +40,7 @@ const Login = () => {
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <StyledWrapper>
-              <form className="form" onSubmit={handleLogin}>
+              <form className="form" onSubmit={handleSubmit}>
                 <p className="title">Login</p>
                 <p className="message">Welcome back! Please login to your account.</p>
 

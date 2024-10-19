@@ -1,104 +1,71 @@
 
 import React, { useState } from "react";
-import { Col, Container } from "react-bootstrap";
-import styled from "styled-components";
-import { Row } from "react-bootstrap";
-import loginImg from "../Assets/login.jpg"
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import styled from "styled-components";
+import loginImg from "../Assets/login.jpg";
+import sideImg from "../Assets/old-blank-page-book-open-white-background-books-stack-side-open-book_614679-43854.jpg";
 import CustmerNavbar from "../Component/CustmerNavbar";
-import InnerCover from "../Component/InnerCover";
+import { v4 as uuidv4 } from 'uuid';
+import toast from "react-hot-toast";
+import "../Pages/BookList.css";
 
 
 
-
-const Register = () => {
+const Signup = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   });
-
+  const [error, setError] = useState('');
   const navigate = useNavigate();
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-    fetch("http://localhost:8000/users")
-      .then((response) => response.json())
-      .then((users) => {
-        // Find the user based on email and password
-        const user = users.find(
-          (user) => user.email === formData.email
-        );
+    setError('');
 
-        if (user) {
-          alert("this email is arleady exist please try another email");
-          return;
-
-        }
-        else {
-          fetch("http://localhost:8000/users", {
-            method: "POST", // Using the POST method to push data
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              firstname: formData.firstname,
-              lastname: formData.lastname,
-              email: formData.email,
-              password: formData.password,
-            }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              alert("Registration successful!");
-              navigate("/login"); // Redirect to login page
-
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching users:", error);
-      });
-
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+    // Basic validation
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.password) {
+      setError('All fields are required');
       return;
-
     }
 
-    // Push user data (email and password) to the server
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
 
+    // Add user to data
+    const newUser = {
+      id: uuidv4(),
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      email: formData.email,
+      password: formData.password,
+    };
+    localStorage.setItem('user', JSON.stringify(newUser));
+    setError('');
+    
+    // Redirect to login page after successful signup
+    toast.success('Signup successful!');
+    navigate('/login');
   };
 
 
   return (
-    <div style={{backgroundColor:"rgb(119 150 162)"}}>
-      <CustmerNavbar />
-
-      <Container fluid style={{ height: "100vh" }}>
-        <Row>
-          <Col>
-            <img
-              src={loginImg}
-              alt="login"
-              style={{ width: "100vh", height: "100vh" }}
-            />
-          </Col>
-          <Col className="d-flex justify-content-center align-items-center">
+    <div>
+      <Container fluid className="user1">  
+      <Row className="h-100">
+    <Col md={6} className="d-none d-md-block">
+    </Col>
+    <Col md={6} className="d-flex justify-content-center align-items-center">
             <StyledWrapper>
               <form className="form" onSubmit={handleSubmit}>
                 <p className="title">Register </p>
@@ -111,7 +78,7 @@ const Register = () => {
                       type="text"
                       name="firstname"
                       value={formData.firstname}
-                      onChange={handleInputChange}
+                      onChange={handleChange}
                       className="input"
                     />
                     <span>Firstname</span>
@@ -124,7 +91,7 @@ const Register = () => {
                       type="text"
                       name="lastname"
                       value={formData.lastname}
-                      onChange={handleInputChange}
+                      onChange={handleChange}
                       className="input"
                     />
                     <span>Lastname</span>
@@ -138,7 +105,7 @@ const Register = () => {
                     type="email"
                     name="email"
                     value={formData.email}
-                    onChange={handleInputChange}
+                    onChange={handleChange}
                     className="input"
                   />
                   <span>Email</span>
@@ -151,7 +118,7 @@ const Register = () => {
                     type="password"
                     name="password"
                     value={formData.password}
-                    onChange={handleInputChange}
+                    onChange={handleChange}
                     className="input"
                   />
                   <span>Password</span>
@@ -164,7 +131,7 @@ const Register = () => {
                     type="password"
                     name="confirmPassword"
                     value={formData.confirmPassword}
-                    onChange={handleInputChange}
+                    onChange={handleChange}
                     className="input"
                   />
                   <span>Confirm password</span>
@@ -181,7 +148,7 @@ const Register = () => {
             </StyledWrapper>
           </Col>
         </Row>
-      </Container>
+        </Container>
     </div>
   );
 };
@@ -197,7 +164,7 @@ const StyledWrapper = styled.div`
     border-radius: 20px;
     position: relative;
   }
-
+  background-color: rgba(255, 255, 255, 0.8);
   .title {
     font-size: 28px;
     color: royalblue;
@@ -322,4 +289,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Register;
+export default Signup;

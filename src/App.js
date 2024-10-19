@@ -11,6 +11,9 @@ import Register from './Pages/Register';
 import WishList from './Pages/WishlistPage';
 import BooksProvider from './Store/BooksContext';
 import CartProvider from './Store/CartContext';
+import Footer from './Component/Footer';
+import { AuthProvider } from './Store/AuthContext';
+
 
 
 
@@ -18,7 +21,8 @@ function App() {
     return (
         <BrowserRouter>
         <BooksProvider>
-        <CartProvider> 
+        <CartProvider>
+        <AuthProvider> 
             <div>
                 <Routes>
                     <Route path="/" element={<Home/>} />
@@ -30,7 +34,9 @@ function App() {
                     <Route path="/register" element={<Register />} />
                 </Routes>
                 <Toaster />
+                <Footer />
             </div>
+        </AuthProvider>
         </CartProvider>
         </BooksProvider>
         </BrowserRouter>

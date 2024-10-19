@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 
 
 function BookCard({ title, description, price, id, imageUrl }) {
-  const { cart, addToCart, addToWishlist, removeFromWishlist, wishlist } = useContext(CartContext)
+  const { addToCart, addToWishlist, removeFromWishlist, wishlist } = useContext(CartContext)
   const ifInWishlist = () => {
     const idx = wishlist.findIndex((_product) => _product.title === title);
     if (idx > -1) {

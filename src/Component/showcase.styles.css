@@ -13,7 +13,7 @@
 .showcase-inner-container{
     height: 50vh;
     width: 100%;
-    background-image:url('/src/Assets/showcase3-bg.png');
+    background-image:url('../Assets/showcase5-bg.png');
     position: relative;
     display: flex;
     justify-content: center;
