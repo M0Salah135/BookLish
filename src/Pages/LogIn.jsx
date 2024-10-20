@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import loginImg from "../Assets/login.jpg";
 import data from "../Data/data";
+import "../Pages/BookList.css";
 import { useAuth } from '../Store/AuthContext';
 
 
@@ -29,15 +29,9 @@ const Login = () => {
 
   return (
     <div>
-      <Container fluid style={{ height: "100vh" }}>
+      <Container fluid className="user1">
         <Row>
-          <Col>
-            <img
-              src={loginImg}
-              alt="login"
-              style={{ width: "100vh", height: "100vh" }}
-            />
-          </Col>
+          
           <Col className="d-flex justify-content-center align-items-center">
             <StyledWrapper>
               <form className="form" onSubmit={handleSubmit}>
@@ -67,6 +61,9 @@ const Login = () => {
               </form>
             </StyledWrapper>
           </Col>
+          <Col>
+           
+          </Col>
         </Row>
       </Container>
     </div>
@@ -79,12 +76,12 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: #fff;
+    height: 500px;
+    background-color: transparent;
     padding: 20px;
     border-radius: 20px;
     position: relative;
   }
-
   .title {
     font-size: 28px;
     color: royalblue;
@@ -137,6 +134,12 @@ const StyledWrapper = styled.div`
     text-decoration: underline royalblue;
   }
 
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+
   .form label {
     position: relative;
   }
@@ -183,7 +186,7 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
     color: #fff;
     font-size: 16px;
-    transition: 0.3s ease;
+    transform: 0.3s ease;
   }
 
   .submit:hover {
@@ -204,3 +207,4 @@ const StyledWrapper = styled.div`
 `;
 
 export default Login;
+

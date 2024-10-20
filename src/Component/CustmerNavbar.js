@@ -25,14 +25,14 @@ const CustmerNavbar = ({ darkTheme }) => {
           <>
             <span  className="nav-links text-orange">  Welcome, {user.firstname}</span>
             <Link onClick={logout} className="nav-links">Logout</Link>
+            <Link className="nav-links" to="/wishlist">WishList<Badge bg="danger">{wishlist.length}</Badge></Link>
+          <Link className="nav-links" to="/cart">Cart<Badge bg="danger">{cart.length}</Badge></Link>
           </>
         ) : (
-          <Link className="nav-links" to="/login">Login</Link>
+          <Link className="nav-links" to="/login">Login/Signup</Link>
         )}
       </>
-          <Link className="nav-links" to="/Register">SignUp</Link>
-          <Link className="nav-links" to="/wishlist">WishList<Badge bg="danger">{wishlist.length}</Badge></Link>
-          <Link className="nav-links" to="/cart">Cart<Badge bg="danger">{cart.length}</Badge></Link>
+          
           
         </nav>
       </div>

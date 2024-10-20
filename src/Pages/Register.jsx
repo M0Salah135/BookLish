@@ -1,16 +1,10 @@
-
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import loginImg from "../Assets/login.jpg";
-import sideImg from "../Assets/old-blank-page-book-open-white-background-books-stack-side-open-book_614679-43854.jpg";
-import CustmerNavbar from "../Component/CustmerNavbar";
 import { v4 as uuidv4 } from 'uuid';
-import toast from "react-hot-toast";
 import "../Pages/BookList.css";
-
-
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -58,14 +52,12 @@ const Signup = () => {
     navigate('/login');
   };
 
-
   return (
     <div>
       <Container fluid className="user1">  
-      <Row className="h-100">
-    <Col md={6} className="d-none d-md-block">
-    </Col>
-    <Col md={6} className="d-flex justify-content-center align-items-center">
+        <Row className="h-100">
+          
+          <Col md={6} className="d-flex justify-content-center align-items-center" >
             <StyledWrapper>
               <form className="form" onSubmit={handleSubmit}>
                 <p className="title">Register </p>
@@ -141,14 +133,22 @@ const Signup = () => {
                   Submit
                 </button>
 
-                <Button variant="link" type="button" as={Link} to="/login">
+                <Button
+                  variant="link"
+                  type="button"
+                  as={Link}
+                  to="/login"
+                  style={{ color: "black" }}
+                >
                   Already have an account?{" "}
                 </Button>
               </form>
             </StyledWrapper>
           </Col>
+          <Col md={6} className="d-none d-md-block">
+          </Col>
         </Row>
-        </Container>
+      </Container>
     </div>
   );
 };
@@ -159,12 +159,11 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
     border-radius: 20px;
     position: relative;
   }
-  background-color: rgba(255, 255, 255, 0.8);
   .title {
     font-size: 28px;
     color: royalblue;
@@ -290,3 +289,4 @@ const StyledWrapper = styled.div`
 `;
 
 export default Signup;
+
