@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { v4 as uuidv4 } from 'uuid';
 import "../Pages/BookList.css";
+import CustmerNavbar from "../Component/CustmerNavbar";
+
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +56,7 @@ const Signup = () => {
 
   return (
     <div>
+    <CustmerNavbar darkTheme={true}/>
       <Container fluid className="user1">  
         <Row className="h-100">
           
@@ -129,9 +132,9 @@ const Signup = () => {
                   <span>Confirm password</span>
                 </label>
 
-                <button className="submit" type="submit">
+                <Button variant="orange" type="submit">
                   Submit
-                </button>
+                </Button>
 
                 <Button
                   variant="link"
@@ -159,14 +162,14 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 20px;
     position: relative;
   }
   .title {
     font-size: 28px;
-    color: royalblue;
+    color: rgb(255 69 0);
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
@@ -183,13 +186,13 @@ const StyledWrapper = styled.div`
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: royalblue;
+    background-color: rgb(255 69 0);
   }
 
   .title::before {
     width: 18px;
     height: 18px;
-    background-color: royalblue;
+    background-color: rgb(255 69 0);
   }
 
   .title::after {
@@ -209,11 +212,11 @@ const StyledWrapper = styled.div`
   }
 
   .signin a {
-    color: royalblue;
+    color: rgb(255 69 0);
   }
 
   .signin a:hover {
-    text-decoration: underline royalblue;
+    text-decoration: rgb(255 69 0);
   }
 
   .flex {

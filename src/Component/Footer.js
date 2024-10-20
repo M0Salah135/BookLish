@@ -1,49 +1,43 @@
 
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn
-} from 'mdb-react-ui-kit';
+import React from 'react';
+import '../index.css'; // Ensure you create this CSS file
+import { Link } from 'react-router-dom';
+import { useAuth } from '../Store/AuthContext';
 
-export default function Footer() {
+const CustmerFooter = () => {
+
+  const { user, logout } = useAuth();
   return (
-    <MDBFooter className='bg-dark text-center text-white'>
-      <MDBContainer className='p-4 pb-0'>
-        <section className='mb-4'>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='facebook-f' />
-          </MDBBtn>
+    <footer className="footer-container" >
+      <div className="container" >
+        <div className="footer-left">
+          <a href="#" className="logo">Book<span className="text-orange">Lish</span></a>
+          <p>&copy; {new Date().getFullYear()} BookLish. All rights reserved.</p>
+        </div>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='twitter' />
-          </MDBBtn>
+        <div className="footer-center">
+          <ul className="footer-links">
+            <Link className="nav-links " to="/">Home</Link>
+            <Link className="nav-links" to="/products">Books</Link>
+            <>{user ? (
+              <Link onClick={logout} className="nav-links">Logout</Link>
+            ) : (
+              <Link className="nav-links" to="/login">Login/Signup</Link>
+            )}
+            </>
+          </ul>
+        </div>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='google' />
-          </MDBBtn>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='instagram' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='linkedin-in' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='github' />
-          </MDBBtn>
-        </section>
-      </MDBContainer>
-
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2020 Copyright:
-        <a className='text-white' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
+        <div className="footer-right">
+          <ul className="social-links">
+            <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
       </div>
-    </MDBFooter>
+    </footer>
   );
-}
+};
+
+export default CustmerFooter;

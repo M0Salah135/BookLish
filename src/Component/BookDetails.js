@@ -6,13 +6,16 @@ import { useParams } from "react-router-dom";
 import { BooksContext } from "../Store/BooksContext";
 import CustmerCards from "./BookCard";
 import CustmerNavbar from "./CustmerNavbar";
+import './detailsSection.styles.css';
+import { CartContext } from "../Store/CartContext";
 
-function BookDetails() {
+const BookDetails = () => {
   const params = useParams();
   const [comment, setComment] = useState("");
   const { books, updateBooks } = useContext(BooksContext);
   const productIdx = books.findIndex((book) => book.id === params.id);
   const founded = books[productIdx];
+  const { addToCart } = useContext(CartContext);
 
   const addComment = () => {
     const commentArray = founded.comment
@@ -42,15 +45,34 @@ function BookDetails() {
   return (
     <div>
     <CustmerNavbar darkTheme={true}/>
-      <Stack direction="horizontal" gap={2} className="justify-content-center">
-        <CustmerCards
-          title={founded.title}
-          price={founded.price}
-          description={founded.description}
-          imageUrl={founded.imageUrl}
-          id={founded.id}
-        />
+      
         <Stack direction="vertical" gap={2} className="align-items-center">
+        <Stack direction="Vertical" gap={2} className="justify-content-center">
+      <section className="detaicontainerl-section-">
+            <div className="container-box">
+                <div className="flex-container">
+                    <div className="book-img-container">
+                        <img src={founded.imageUrl} alt="book" />
+                    </div>
+
+                    <div className="book-detail-container">
+                        <h2>{founded.title}</h2>
+                        <p className="text-primary"><b>{founded.author}</b></p>
+                        <p className="book-description">{founded.description}</p>
+                        <p><b>Category</b>: {founded.category}</p>
+                        <p><b>Book Stock</b>: {founded.stock}</p>
+                        <h3>{founded.price} EGP</h3>
+
+                        <Button className="button-primary" onClick={() => {
+                            const productDetails = { 'title':founded.title, 'img':founded.imageUrl,'id': founded.id , 'description': founded.description,'author':founded.author ,'price':founded.price};
+                            addToCart(productDetails);
+                        }}>Add To Cart
+                        </Button >
+                    </div>
+
+                </div>               
+              </div>
+        </section >
           <Form.Label htmlFor="comment">Comment</Form.Label>
           <Form.Control
             type="text"
@@ -60,7 +82,7 @@ function BookDetails() {
               setComment(event.target.value);
             }}
           />
-          <Button variant="primary" className="w-50" onClick={addComment}>
+          <Button className="button-primary" style={{maxWidth: '200px'}} onClick={addComment}>
             Add comment
           </Button>
           {founded.comment?.map((item, index) => (
@@ -73,7 +95,7 @@ function BookDetails() {
       </Stack>
     </div>
   );
-}
+};
 
 export default BookDetails;
 

@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import BookCard from "../Component/BookCard";
-import data from "../Data/data.json";
 import "../Pages/BookList.css";
+import { BooksContext } from "../Store/BooksContext";
 
 
 
 
 function BooksList() {
 
-    const [books, setBooks] = useState(data.books);
-    const [users, setUsers] = useState(data.users);
+    const {books} = useContext(BooksContext);
     return (
         <div className="pt-5 list">
             <h3 style={{ textAlign: 'center', textShadow: '0px 0px 10px #fff' }} className="pt-5" >Welcome to our <span className= "text-orange" style={{ textShadow: '0px 0px 10px black' }}>List of Books </span></h3>

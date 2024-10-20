@@ -1,93 +1,118 @@
-import { useContext, useMemo, useState } from 'react';
-import { ButtonGroup, Container, Stack, ToggleButton } from 'react-bootstrap';
-import Button from 'react-bootstrap/esm/Button';
+import { useContext } from 'react';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 import Image from "react-bootstrap/Image";
 import ListGroup from 'react-bootstrap/ListGroup';
-import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import Row from 'react-bootstrap/Row';
+import CustmerNavbar from '../Component/CustmerNavbar';
+import LogCover from '../Component/LogCover';
 import { CartContext } from '../Store/CartContext';
-
-
-
-const radios = [
-  { name: "Cash", value: "1" },
-  { name: "Credit", value: "2" },
-  { name: "Vodafone cash", value: "3" },
-];
+import './cart.css'; // Assuming your custom styles are here
 
 function CartList() {
-  const [radioValue, setRadioValue] = useState("1");
-  const navigate = useNavigate();
+  
 
   const {cart, addToCart,removeFromCart,decreasCount} = useContext(CartContext);
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = Math.round(cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
 
-  const renderList = useMemo(() => {
-    return cart.map((item, idx, arr) => (
-      <ListGroup.Item
-        key={item.title}
-        as="li"
-        className="d-flex gap-3 justify-content-between align-items-start"
-      >
-        <div className="">
-          <Image
-            src={item.imageUrl}
-            className="square-img object-fit-cover border rounded-circle"
-          />
-        </div>
-        <div className="fs-2 fw-bolder me-auto">
-          {item.title}{" "}
-          <span className="fs-4 fw-normal">x{item.quantity ?? 0}</span>
-        </div>
-        <Stack gap={2} direction="horizontal">
-            <Stack direction="horizontal" gap={2}>
-              <Button variant="primary" onClick={() => addToCart(item)}>+</Button>
-              <Button variant="danger" onClick={() => decreasCount(item)}>-</Button>
-            </Stack>
-            <Button variant="danger" size="sm" onClick={() => removeFromCart(item)}>Remove</Button>
-          </Stack>
-
-      </ListGroup.Item>
-    ));
-  }, [cart]);
 
   return (
-    <Container className="pt-5">
-      <ListGroup as="ol" className="gap-4">
-        {renderList}
-      </ListGroup>
-      <h4 className="mt-2">Details</h4>
-      <p>{total}EGP</p>
-      <hr />
-      <Stack gap={3}>
-        <ButtonGroup>
-          {radios.map((radio, idx) => (
-            <ToggleButton
-              key={idx}
-              id={`radio-${idx}`}
-              type="radio"
-              variant={idx % 2 ? "outline-success" : "outline-danger"}
-              name="radio"
-              value={radio.value}
-              checked={radioValue === radio.value}
-              onChange={(e) => setRadioValue(e.currentTarget.value)}
-            >
-              {radio.name}
-            </ToggleButton>
-          ))}
-        </ButtonGroup>
+    <di>
+      <CustmerNavbar />
+      <LogCover />
+      <div className="cart-page">
+        <Row className="g-4">
+          {/* Cart Items */}
+          <Col md={8}>
+            <Card className="p-3">
+              <h4 className="mb-3">Shopping Cart</h4>
+              <ListGroup as="ol" numbered>
+                {cart.map((item, id) => (
+                  <ListGroup.Item
+                    key={id}
+                    as="li"
+                    className="d-flex justify-content-between align-items-center"
+                  >
+                    <div className="d-flex align-items-center">
+                      <Image
+                        src={item.imageUrl}
+                        width={80}
+                        className="cart-item-img rounded me-3"
+                        alt={item.title}
+                      />
+                      <div>
+                        <div className="fw-bold">{item.title}</div>
+                        <div>{item.price} EGP</div>
+                      </div>
+                    </div>
 
-        <Button
-          variant="success"
-          onClick={() => {
-            if (total > 0) navigate("/checkout");
-            else toast.error("Your cart is empty!");
-          }}
-        >
-          Checkout
-        </Button>
-      </Stack>
-    </Container>
+                    <div className="quantity-control d-flex align-items-center">
+                      <Button
+                        variant="outline-secondary"
+                        className="btn-sm"
+                        onClick={() => decreasCount(item)}
+                      >
+                        -
+                      </Button>
+                      <Badge bg="primary" className="mx-2">
+                        {item.quantity}
+                      </Badge>
+                      <Button
+                        variant="outline-secondary"
+                        className="btn-sm"
+                        onClick={() => addToCart(item)}
+                      >
+                        +
+                      </Button>
+                    </div>
+                    <Button
+                      variant="danger"
+                      className="ms-3"
+                      onClick={() => removeFromCart(item)}
+                    >
+                      &#10005;
+                    </Button>
+                  </ListGroup.Item>
+                ))}
+              </ListGroup>
+            </Card>
+            <div className="mt-3">
+              <a href="/" className="text-decoration-none">
+                &#8592; Back to shop
+              </a>
+            </div>
+          </Col>
+
+          {/* Summary */}
+          <Col md={4}>
+            <Card className="p-3">
+              <h5>Summary</h5>
+              <div className="d-flex justify-content-between">
+                <span>ITEMS {cart.length}</span>
+                <span>{total} EGP</span>
+              </div>
+              <div className="mt-2">
+                <span>SHIPPING</span>
+                <p className="mb-1">Standard-Delivery &#8211; 5.00 EGP</p>
+              </div>
+              <div className="my-3">
+                <span>GIVE CODE</span>
+                <input type="text" placeholder="Enter your code" className="form-control" />
+              </div>
+              <div className="d-flex justify-content-between fw-bold">
+                <span>TOTAL PRICE</span>
+                <span>{total + 5} EGP</span>
+              </div>
+              <Button variant="dark" className="mt-3 w-100">
+                Checkout
+              </Button>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </di>
   );
 }
 

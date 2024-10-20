@@ -5,6 +5,8 @@ import styled from "styled-components";
 import data from "../Data/data";
 import "../Pages/BookList.css";
 import { useAuth } from '../Store/AuthContext';
+import "../index.css"
+import CustmerNavbar from "../Component/CustmerNavbar";
 
 
 const Login = () => {
@@ -29,13 +31,14 @@ const Login = () => {
 
   return (
     <div>
+    <CustmerNavbar darkTheme={true}/>
       <Container fluid className="user1">
-        <Row>
+        <Row className="d-flex justify-content-center align-items-center">
           
           <Col className="d-flex justify-content-center align-items-center">
             <StyledWrapper>
               <form className="form" onSubmit={handleSubmit}>
-                <p className="title">Login</p>
+                <p className="title" >Login</p>
                 <p className="message">Welcome back! Please login to your account.</p>
 
                 <label>
@@ -52,7 +55,7 @@ const Login = () => {
                   Forgot password?
                 </Button>
 
-                <button className="submit">Login</button>
+                <Button variant="orange" type="submit">Login</Button>
 
                 <p className="signin">
                   Don't have an account?{" "}
@@ -77,14 +80,14 @@ const StyledWrapper = styled.div`
     gap: 10px;
     max-width: 350px;
     height: 500px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 20px;
     position: relative;
   }
   .title {
     font-size: 28px;
-    color: royalblue;
+    color: rgb(255 69 0);
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
@@ -101,13 +104,13 @@ const StyledWrapper = styled.div`
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: royalblue;
+    background-color:rgb(255 69 0);
   }
 
   .title::before {
     width: 18px;
     height: 18px;
-    background-color: royalblue;
+    background-color: rgb(255 69 0);
   }
 
   .title::after {
@@ -127,11 +130,11 @@ const StyledWrapper = styled.div`
   }
 
   .signin a {
-    color: royalblue;
+    color: rgb(255 69 0);
   }
 
   .signin a:hover {
-    text-decoration: underline royalblue;
+    text-decoration: rgb(255 69 0);
   }
 
   .flex {
@@ -181,7 +184,7 @@ const StyledWrapper = styled.div`
   .submit {
     border: none;
     outline: none;
-    background-color: royalblue;
+    background-color: rgb(255 69 0);
     padding: 10px;
     border-radius: 10px;
     color: #fff;
