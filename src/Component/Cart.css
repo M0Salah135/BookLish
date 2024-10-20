@@ -1,0 +1,65 @@
+/* Cart.css */
+body {
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  padding: 0; /* إزالة الحشوة الافتراضية */
+  font-family: Arial, sans-serif; /* خط افتراضي */
+  background-image: url('../Assets/showcase5-bg.png'); /* استبدل هذا باسم الصورة الخاصة بك */
+  background-size: cover; /* لتغطية الخلفية بالكامل */
+  background-position: center; /* لمركز الصورة */
+  background-repeat: no-repeat; /* عدم تكرار الصورة */
+  min-height: 100vh; /* ضمان أن الخلفية تغطي كامل ارتفاع الشاشة */
+}
+.cart-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9; /* خلفية خفيفة */
+  border-radius: 8px; /* زوايا مدورة */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  margin-top: 200px;
+
+}
+
+.cart-title {
+  font-size: 24px; /* حجم الخط */
+  font-weight: bold; /* خط عريض */
+  margin-bottom: 20px; /* مساحة أسفل العنوان */
+  text-align: center; /* محاذاة إلى المنتصف */
+}
+
+.cart-list {
+  list-style-type: none; /* إزالة النقاط من القائمة */
+  padding: 0; /* إزالة padding الافتراضي */
+}
+
+.cart-item {
+  display: flex; /* استخدام flexbox */
+  justify-content: space-between; /* توزيع العناصر */
+  align-items: center; /* محاذاة عمودية */
+  padding: 10px; /* مساحة داخلية */
+  border-bottom: 1px solid #ddd; /* حدود أسفل العنصر */
+}
+
+.cart-item:last-child {
+  border-bottom: none; /* إزالة الحدود للعنصر الأخير */
+}
+
+.cart-item-name {
+  font-size: 18px; /* حجم خط اسم الكتاب */
+}
+
+.cart-item-price {
+  font-size: 16px; /* حجم خط السعر */
+}
+
+.cart-item-quantity input {
+  width: 50px; /* عرض حقل الإدخال */
+  margin-left: 5px; /* مساحة يسار */
+}
+
+.cart-total {
+  font-size: 20px; /* حجم خط المجموع */
+  font-weight: bold; /* خط عريض */
+  margin-top: 20px; /* مساحة أعلى */
+  text-align: right; /* محاذاة إلى اليمين */
+}

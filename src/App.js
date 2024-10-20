@@ -11,6 +11,9 @@ import Register from './Pages/Register';
 import WishList from './Pages/WishlistPage';
 import BooksProvider from './Store/BooksContext';
 import CartProvider from './Store/CartContext';
+import Cart from './Component/Cart';
+import CustmerNavbar from './Component/CustmerNavbar';
+
 
 
 
@@ -20,11 +23,12 @@ function App() {
         <BooksProvider>
         <CartProvider> 
             <div>
+            <CustmerNavbar />  {/* إضافة Navbar هنا لجعله مرئيًا دائمًا */}
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/book/:id" element={<BookDetails />} />
                     <Route path="/products" element={<HomeSub />} />
-                    <Route path="/cart" element={<CartList />} />
+                    <Route path="/cart" element={<Cart />} />  {/* استخدام Cart هنا */}
                     <Route path="/wishlist" element={<WishList />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/register" element={<Register />} />
