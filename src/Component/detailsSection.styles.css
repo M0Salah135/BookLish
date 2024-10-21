@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Hanken Grotesk;
+}
+
+:root{
+    --primary-color:orangered;
+    --primary-color-bright:#fa7727;
+    --white-color: #fff;
+   
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: chivo Mono;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+.container-box{
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.flex{ display: flex;}
+.justify-center{ justify-content: center;}
+.justify-between{ justify-content: space-between;}
+.align-center{ align-items: center;}
+
+.text-primary{ color: var(--primary-color);}
+
+.button-primary {
+    display: inline-block;
+    background-color: var(--primary-color-bright);
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+    border: none;
+    font-family: chivo Mono; 
+    font-size: 1rem;
+}
+
+
+.button-primary:hover {
+    background-color: #222;
+}
+
+
+
+.detail-section-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 8rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-img-container,
+.book-detail-container {
+    width: 50%;
+
+}
+
+.book-img-container {
+    text-align: center;
+}
+
+.book-img-container img {
+    height: 350px;
+    border: 1px solid #ddd;
+
+}
+
+.book-detail-container h2 {
+    font-size: 2rem;
+}
+
+.book-detail-container p {
+    padding: 1rem 0;
+    font-size: 1rem;
+
+
+}
+
+.book-description {
+    line-height: 1rem;
+}
+
+.book-detail-container h3 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: orangered;
+
+}
+
+.cart-button {
+    display: inline-block;
+    background-color: var(--primary-color-bright);
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+}
+
+.cart-button:hover {
+    background-color: #222;
+}
+p{
+    margin-bottom: 0;
+}
+
+
+

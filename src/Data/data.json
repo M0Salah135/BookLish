@@ -18,7 +18,7 @@
       "id": "2ce4",
       "firstname": "m",
       "lastname": "ma",
-      "email": "eng.m.maro@gmail.com",
+      "email": "eng.maro@gmail.com",
       "password": "123456"
     },
     {
@@ -27,6 +27,13 @@
       "lastname": "admin",
       "email": "admin@admin",
       "password": "admin"
+    },
+    {
+      "id": "49ae",
+      "firstname": "admin",
+      "lastname": "admin",
+      "email": "a@a.com",
+      "password": "123"
     }
   ],
   "books": [
@@ -38,7 +45,7 @@
       "price": 19.99,
       "description": "A thrilling journey through space and time where humanity's future depends on one man's choices.",
       "stock": 12,
-      "imageUrl": "https://books.google.com.eg/books?id=mrgCAAAAQAAJ&pg=PA106&dq=The+Shadow+of+Time+-+Arthur+Blackwood&hl=en&newbks=1&newbks_redir=1&sa=X&ved=2ahUKEwj0q8GLiZiJAxVoSKQEHWi1CXAQ6wF6BAgMEAE"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1267018004i/2679126.jpg"
     },
     {
       "id": "2",
@@ -48,7 +55,7 @@
       "price": 14.99,
       "description": "An epic tale of survival and resilience in the harsh northern wilderness.",
       "stock": 8,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388563999i/269713.jpg"
     },
     {
       "id": "3",
@@ -58,7 +65,7 @@
       "price": 17.99,
       "description": "A gripping story about an ancient empire lost in the sands of time.",
       "stock": 5,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566099429i/43263508.jpg"
     },
     {
       "id": "4",
@@ -68,7 +75,7 @@
       "price": 10.99,
       "description": "A chilling tale of hauntings and nightmares in a remote village.",
       "stock": 20,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1304091601i/10675183.jpg"
     },
     {
       "id": "5",
@@ -78,7 +85,7 @@
       "price": 15.99,
       "description": "An extraordinary quest to the depths of the world where ancient powers lie.",
       "stock": 15,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320431308i/12035204.jpg"
     },
     {
       "id": "6",
@@ -88,7 +95,7 @@
       "price": 13.99,
       "description": "In a distant future, the last surviving Martian seeks to preserve their dying race.",
       "stock": 7,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347296373i/2033517.jpg"
     },
     {
       "id": "7",
@@ -98,7 +105,7 @@
       "price": 11.99,
       "description": "A detective must unravel a web of lies before another victim falls.",
       "stock": 10,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1535293033i/41463451.jpg"
     },
     {
       "id": "8",
@@ -108,7 +115,7 @@
       "price": 16.99,
       "description": "A young girl stumbles upon a magical forest filled with wonder and danger.",
       "stock": 22,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1695049391i/199013539.jpg"
     },
     {
       "id": "9",
@@ -118,7 +125,7 @@
       "price": 18.99,
       "description": "An archaeologist uncovers a tomb that hides more than just treasure.",
       "stock": 9,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1591987699i/53981777.jpg"
     },
     {
       "id": "10",
@@ -128,7 +135,7 @@
       "price": 12.99,
       "description": "In a world where AI controls everything, one woman fights for freedom.",
       "stock": 11,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1340911840i/12917124.jpg"
     },
     {
       "id": "11",
@@ -138,7 +145,7 @@
       "price": 9.99,
       "description": "A chilling psychological thriller where nothing is as it seems.",
       "stock": 25,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1715861081i/213556723.jpg"
     },
     {
       "id": "12",
@@ -148,7 +155,7 @@
       "price": 17.99,
       "description": "The untold story of the soldiers who fought in the trenches of World War I.",
       "stock": 13,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1519309163i/9315641.jpg"
     },
     {
       "id": "13",
@@ -158,7 +165,7 @@
       "price": 14.99,
       "description": "A young sorceress must outwit her enemies to claim her rightful throne.",
       "stock": 14,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388265750i/62022.jpg"
     },
     {
       "id": "14",
@@ -168,7 +175,7 @@
       "price": 15.99,
       "description": "A deep-sea diver discovers a hidden world beneath the ocean's surface.",
       "stock": 6,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1373486713i/18186951.jpg"
     },
     {
       "id": "15",
@@ -178,7 +185,7 @@
       "price": 13.99,
       "description": "Two strangers find love amidst a devastating storm that changes their lives forever.",
       "stock": 30,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638499799i/59744650.jpg"
     },
     {
       "id": "16",
@@ -188,7 +195,7 @@
       "price": 11.99,
       "description": "An ancient key unlocks secrets that were meant to stay hidden.",
       "stock": 19,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1408313053i/412956.jpg"
     },
     {
       "id": "17",
@@ -198,7 +205,7 @@
       "price": 10.99,
       "description": "A psychological horror that explores the thin line between sanity and madness.",
       "stock": 21,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1360096723i/12453610.jpg"
     },
     {
       "id": "18",
@@ -208,7 +215,7 @@
       "price": 9.99,
       "description": "The timeless military strategy text that has influenced leaders for centuries.",
       "stock": 50,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630683326i/10534.jpg"
     },
     {
       "id": "19",
@@ -218,7 +225,7 @@
       "price": 12.99,
       "description": "A philosophical novel that follows a young shepherd on his journey to find treasure.",
       "stock": 40,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg"
     },
     {
       "id": "20",
@@ -228,7 +235,128 @@
       "price": 14.99,
       "description": "A coder trapped in a virtual reality must escape before the system crashes forever.",
       "stock": 17,
-      "imageUrl": "https://placehold.co/600x400"
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1529141136i/40538457.jpg"
+    },
+    {
+      "id": "21",
+      "title": "The Desert King's Secret",
+      "author": "Anna Summers",
+      "category": "Romance",
+      "price": 13.99,
+      "description": "A forbidden love story between a desert king and a commoner woman from the village.",
+      "stock": 18,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526002146i/29870166.jpg"
+    },
+    {
+      "id": "22",
+      "title": "The Hidden Labyrinth",
+      "author": "Michael Hunt",
+      "category": "Mystery",
+      "price": 12.99,
+      "description": "A thrilling race against time to uncover the secrets of an ancient maze hidden beneath the city.",
+      "stock": 14,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1557856841i/22942144.jpg"
+    },
+    {
+      "id": "23",
+      "title": "Fire and Ashes",
+      "author": "Sophia Adams",
+      "category": "Fantasy",
+      "price": 15.99,
+      "description": "In a world ruled by dragons, a young woman must find her power to prevent a devastating war.",
+      "stock": 10,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1646331112i/60543234.jpg"
+    },
+    {
+      "id": "24",
+      "title": "The Man in the Mirror",
+      "author": "Joseph Green",
+      "category": "Thriller",
+      "price": 11.99,
+      "description": "A psychological thriller where a man starts seeing reflections of events that have yet to happen.",
+      "stock": 16,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1384259815i/37570.jpg"
+    },
+    {
+      "id": "25",
+      "title": "Galactic Crusaders",
+      "author": "Thomas Bell",
+      "category": "Science Fiction",
+      "price": 17.99,
+      "description": "An interstellar war rages as a band of rebels fights to save the galaxy from tyranny.",
+      "stock": 22,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1558587304i/45996464.jpg"
+    },
+    {
+      "id": "26",
+      "title": "Echoes of the Past",
+      "author": "Emily Carter",
+      "category": "Historical Fiction",
+      "price": 14.99,
+      "description": "A story about the haunting secrets of a family estate and the unraveling of long-buried truths.",
+      "stock": 9,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1669918647i/63903181.jpg"
+    },
+    {
+      "id": "27",
+      "title": "Fangs of the Night",
+      "author": "Oscar Wolfe",
+      "category": "Horror",
+      "price": 10.99,
+      "description": "A small town is terrorized by a series of brutal attacks as an ancient evil awakens.",
+      "stock": 13,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1523060935i/39744740.jpg"
+    },
+    {
+      "id": "28",
+      "title": "The Light Between Worlds",
+      "author": "Charlotte Hayes",
+      "category": "Fantasy",
+      "price": 15.99,
+      "description": "Two sisters find themselves transported to a magical realm where their destinies are intertwined.",
+      "stock": 17,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1517804040i/38351557.jpg"
+    },
+
+    {
+      "id": "29",
+      "title": "Dark Waters",
+      "author": "Isabel Davis",
+      "category": "Thriller",
+      "price": 11.99,
+      "description": "A murder mystery unfolds on a remote island where the locals are hiding deadly secrets.",
+      "stock": 12,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685352312i/112974914.jpg"
+    },
+    {
+      "id": "30",
+      "title": "The Silver Sword",
+      "author": "Mark Wilson",
+      "category": "Fantasy",
+      "price": 14.99,
+      "description": "A legendary warrior is tasked with retrieving an enchanted sword that can save his kingdom.",
+      "stock": 15,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511953287i/756607.jpg"
+    },
+    {
+      "id": "31",
+      "title": "Broken Promises",
+      "author": "Sarah Collins",
+      "category": "Romance",
+      "price": 13.99,
+      "description": "A heartbreaking tale of love, betrayal, and second chances in a small coastal town.",
+      "stock": 25,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682838616i/144738728.jpg"
+    },
+    {
+      "id": "32",
+      "title": "Under the Crimson Sky",
+      "author": "Victor Hale",
+      "category": "Adventure",
+      "price": 15.99,
+      "description": "A daring expedition to uncover the secrets of an uncharted land under a blood-red sky.",
+      "stock": 18,
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526719732i/40016343.jpg"
     }
   ]
 }

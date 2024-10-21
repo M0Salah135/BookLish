@@ -1,0 +1,19 @@
+.list {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(44, 41, 1, 0.8)), url(../Assets/showcase5-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+    background-blend-mode: normal;
+  }
+
+  .user1{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(44, 41, 1, 0.5)), url(../Assets/old-blank-page-book-open-white-background-books-stack-side-open-book_614679-43854.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+    background-blend-mode: normal;
+  }

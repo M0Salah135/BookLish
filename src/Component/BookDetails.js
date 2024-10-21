@@ -1,69 +1,82 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Button, Stack } from "react-bootstrap";
 import Container from "react-bootstrap/esm/Container";
-import Form from 'react-bootstrap/Form';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BooksContext } from "../Store/BooksContext";
-import CustmerCards from "./BookCard";
+import { CartContext } from "../Store/CartContext";
+import CustmerNavbar from "./CustmerNavbar";
+import "./detailsSection.styles.css";
 
-function BookDetails() {
+const BookDetails = () => {
+  // Get the URL parameters
   const params = useParams();
-  const [comment, setComment] = useState("");
-  const { books, updateBooks } = useContext(BooksContext);
+
+  // Get Navigation
+  const navigate = useNavigate();
+
+  // Get the books context and update function
+  const { books } = useContext(BooksContext);
+
+  // Find the index of the selected book
   const productIdx = books.findIndex((book) => book.id === params.id);
   const founded = books[productIdx];
 
-  const addComment = () => {
-    const commentArray = founded.comment
-      ? [
-          ...founded.comment,
-          {
-            title: comment,
-            date: new Date(),
-          },
-        ]
-      : [
-          {
-            title: comment,
-            date: new Date(),
-          },
-        ];
+  // Get the addToCart function from CartContext
+  const { addToCart } = useContext(CartContext);
 
-    const newProductObject = { ...founded, comment: commentArray };
-    books[productIdx] = newProductObject;
-
-    updateBooks([...books]);
-  };
-
+  // If the book is not found, display a message
   if (!founded) return <Container>No found</Container>;
+
+  // Handle Add to Cart
+  const handleAddToCart = () => {
+    addToCart(founded);
+    navigate("/cart");
+  };
 
   return (
     <div>
-      <CustmerCards
-        title={founded.title}
-        price={founded.price}
-        description={founded.description}
-        imageUrl={founded.imageUrl}
-      />
-      <Stack direction="vertical" gap={2}>
-        <Form.Label htmlFor="comment">Comment</Form.Label>
-        <Form.Control
-          type="text"
-          id="comment"
-          onChange={(event) => {
-            setComment(event.target.value);
-          }}
-        />
-        <Button variant="primary" onClick={addComment}>
-          Add comment
-        </Button>
-        {founded.comment?.map((item, index) => (
-          <p key={index}>{item.title}</p>
-        ))}
+      {/* Display the navbar */}
+      <CustmerNavbar darkTheme={true} />
+
+      {/* Main content section */}
+      <Stack direction="vertical" gap={2} className="align-items-center">
+        <Stack direction="Vertical" gap={2} className="justify-content-center">
+          {/* Book details section */}
+          <section className="detaicontainerl-section-">
+            <div className="container-box">
+              <div className="flex-container">
+                {/* Book image */}
+                <div className="book-img-container">
+                  <img src={founded.imageUrl} alt="book" />
+                </div>
+
+                {/* Book details */}
+                <div className="book-detail-container">
+                  <h2>{founded.title}</h2>
+                  <p className="text-primary">
+                    <b>{founded.author}</b>
+                  </p>
+                  <p className="book-description">{founded.description}</p>
+                  <p>
+                    <b>Category</b>: {founded.category}
+                  </p>
+                  <p>
+                    <b>Book Stock</b>: {founded.stock}
+                  </p>
+                  <h3>{founded.price} EGP</h3>
+
+                  {/* Add to cart button */}
+                  <Button className="button-primary" onClick={handleAddToCart}>
+                    Add To Cart
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Stack>
       </Stack>
     </div>
   );
-}
+};
 
 export default BookDetails;
-
