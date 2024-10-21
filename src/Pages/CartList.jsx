@@ -23,7 +23,7 @@ function CartList() {
   const total = Math.round(cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
 
   return (
-    <di>
+    <div>
       {/* Display the navbar */}
       <CustmerNavbar />
       {/* Show the cover */}
@@ -122,7 +122,7 @@ function CartList() {
           </Col>
         </Row>
       </div>
-    </di>
+    </div>
   );
 }
 

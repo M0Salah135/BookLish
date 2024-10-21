@@ -11,5 +11,4 @@ npm install
 "react-hot-toast": "^2.4.1",
 "react-router-dom": "^6.26.2",
 "react-scripts": "5.0.1",
-"styled-components": "^6.1.13",
 "web-vitals": "^2.1.4"
