@@ -1,15 +1,13 @@
-
 import { useContext } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import BookCard from "../Component/BookCard";
-import { CartContext } from "../Store/CartContext";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CustmerNavbar from "../Component/CustmerNavbar";
 import LogCover from "../Component/LogCover";
-import { Link } from "react-router-dom";
+import { CartContext } from "../Store/CartContext";
 
 /**
  * The WishList component displays a list of books in the user's wishlist.
- * 
+ *
  * @returns {JSX.Element}
  */
 function WishList() {
@@ -24,15 +22,18 @@ function WishList() {
         <h1>My Wishlist</h1>
 
         {wishlist.length > 0 ? (
-          <ul className="book-list">
+          <ul className="book-list list-group">
             {wishlist.map((item, idx, arr) => (
               <li key={item.id} className="book-item">
-
                 {/* Display book image and details in a section */}
                 <section className="cart-item justify-content-between">
-                  <div className="cart-item-img-container">
+                  <div>
                     {/* Display book image */}
-                    <img src={item.imageUrl} alt={item.title} className="cart-item-img" />
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="cart-item-img img-fluid"
+                    />
                   </div>
 
                   <div className="cart-item-content-container">
@@ -43,20 +44,30 @@ function WishList() {
                     <Link to={`../book/${item.id}`} className="button-primary">
                       Product Details
                     </Link>
-                    
                   </div>
                   {/* Add to cart button */}
                   <div>
-                    <Button size="sm" className="ms-2" variant="success" onClick={() => addToCart(item)}>
+                    <Button
+                      size="sm"
+                      className="ms-2"
+                      variant="success"
+                      onClick={() => addToCart(item)}
+                    >
                       Add to Cart
                     </Button>
                   </div>
                   {/* Remove from wishlist button */}
 
-                  <div><Button size="sm" className="ms-2" variant="danger" onClick={() => removeFromWishlist(item)}>
+                  <div>
+                    <Button
+                      size="sm"
+                      className="ms-2"
+                      variant="danger"
+                      onClick={() => removeFromWishlist(item)}
+                    >
                       Remove from Wishlist
-                    </Button></div>
-                 
+                    </Button>
+                  </div>
                 </section>
               </li>
             ))}

@@ -14,13 +14,13 @@ const CustmerFooter = () => {
   const { user, logout } = useAuth();
 
   return (
-    <footer className="footer-container" >
+    <footer className="footer-container">
       {/* Container element that holds all the footer elements */}
-      <div className="container" >
+      <div className="container">
         {/* Left side of the footer which contains the logo and copyright text */}
         <div className="footer-left">
           {/* Link that displays the logo */}
-          <a href="#" className="logo">Book<span className="text-orange">Lish</span></a>
+          <Link to="/" className="logo">Book<span className="text-orange">Lish</span></Link>
           {/* Copyright text */}
           <p>&copy; {new Date().getFullYear()} BookLish. All rights reserved.</p>
         </div>
@@ -30,18 +30,19 @@ const CustmerFooter = () => {
           {/* Unordered list of links */}
           <ul className="footer-links">
             {/* Link to the home page */}
-            <Link className="nav-links " to="/">Home</Link>
+            <li><Link className="nav-links" to="/">Home</Link></li>
             {/* Link to the products (books) page */}
-            <Link className="nav-links" to="/products">Books</Link>
+            <li><Link className="nav-links" to="/products">Books</Link></li>
             {/* Conditional rendering of the login/logout link */}
-            <>{user ? (
-              /* If the user is logged in, show the logout link */
-              <Link onClick={logout} className="nav-links">Logout</Link>
-            ) : (
-              /* If the user is not logged in, show the login/signup link */
-              <Link className="nav-links" to="/login">Login/Signup</Link>
-            )}
-            </>
+            <li>
+              {user ? (
+                /* If the user is logged in, show the logout link */
+                <Link onClick={logout} className="nav-links">Logout</Link>
+              ) : (
+                /* If the user is not logged in, show the login/signup link */
+                <Link className="nav-links" to="/login">Login</Link>
+              )}
+            </li>
           </ul>
         </div>
 

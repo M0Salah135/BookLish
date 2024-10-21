@@ -29,7 +29,7 @@ const SearchResulat = () => {
               <li key={book.id} className="book-item">
 
                 <section className="cart-item">
-                  <div className="cart-item-img-container">
+                  <div>
                     {/* Display book image */}
                     <img src={book.imageUrl} alt={book.title} className="cart-item-img" />
                   </div>

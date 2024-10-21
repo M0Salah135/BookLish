@@ -13,19 +13,19 @@ function RecentAdd() {
   const { books } = useContext(BooksContext);
 
   // Create a new state and set it to the last 12 books
-  const [newBooks, setNewBooks] = useState(books.slice(-12));
+  const [newBooks] = useState(books.slice(-12));
 
   // Create an empty array to store the chunked items
   const chunkedItems = [];
 
   // Loop over the books and chunk them into groups of 4
-  for (let i = 0; i < books.length; i += 4) {
+  for (let i = 0; i < newBooks.length; i += 4) {
     chunkedItems.push(newBooks.slice(i, i + 4));
   }
 
   // Return the component
   return (
-    <div className="recent-add-section" style={{ backgroundColor: 'rgb(255 69 0)', padding: '50px 0', marginTop: '10px' }}>
+    <div className="recent-add-section" style={{ backgroundColor: 'rgb(255 69 0)', padding: '50px 0' }}>
       {/* Title of the section */}
       <h3 style={{ textAlign: 'center', marginBottom: '10px', color: 'rgb(247 243 243)', fontWeight: 'bold' }}>
         Newly Added Books
