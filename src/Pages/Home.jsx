@@ -19,7 +19,7 @@ function Home() {
             {/* The CustmerCover component renders the cover image and the search bar. */}
             <CustmerCover />
             {/* The BooksList component renders the list of books. */}
-            <BooksList showPagination={false}/>
+            <BooksList showPagination={false} showSearch={false}/>
             {/* The RecentAdd component renders the list of recently added books. */}
             <RecentAdd />
         </div>

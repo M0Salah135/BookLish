@@ -231,9 +231,9 @@ h1{
   }
   
   .showcase-inner-container{
-      height: 50vh;
+      height: 20vh;
       width: 100%;
-      background-image:url('/src/Assets/showcase3-bg.png');
+      background-color:rgba(172, 57, 57, 0.045);
       position: relative;
       display: flex;
       justify-content: center;

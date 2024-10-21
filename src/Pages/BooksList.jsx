@@ -3,12 +3,13 @@ import { useContext, useState } from "react";
 import { Col, Container, Pagination, Row } from "react-bootstrap";
 import BookCard from "../Component/BookCard";
 import { BooksContext } from "../Store/BooksContext";
+import InnerCover from "../Component/InnerCover";
 
 /**
  * Component to display a list of books
  * @returns {JSX.Element}
  */
-function BooksList({ showPagination = true }) {
+function BooksList({ showPagination = true , showSearch = true}) {
   // Get the list of books from the context
   const { books } = useContext(BooksContext);
 
@@ -26,9 +27,13 @@ function BooksList({ showPagination = true }) {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  
 
   return (
     <div className="py-5 list">
+      {showSearch && (
+        <InnerCover/>
+      )}
       {/* Title of the book list */}
       <h3
         style={{ textAlign: "center", textShadow: "0px 0px 10px #fff" }}
@@ -53,6 +58,7 @@ function BooksList({ showPagination = true }) {
                 description={item.description}
                 imageUrl={item.imageUrl}
                 id={item.id}
+                stock={item.stock}
               />
             </Col>
           ))}

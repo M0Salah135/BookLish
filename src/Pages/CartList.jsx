@@ -20,7 +20,7 @@ function CartList() {
   // Get the cart items and functions from the CartContext
   const {cart, addToCart, removeFromCart, decreasCount} = useContext(CartContext);
   // Calculate the total price of items in the cart
-  const total = Math.round(cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
+  const total = parseInt(cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
 
   return (
     <div>

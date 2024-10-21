@@ -59,15 +59,20 @@ const CartProvider = ({ children }) => {
 
     const idx = cart.findIndex((_product) => _product.title === product.title);
     const newCart = [...cart];
-    if (idx > -1) {
+    if (idx > -1 && newCart[idx].quantity < newCart[idx].stock) {
       newCart[idx].quantity++;
+      // Show a success message
+      toast.success("Product Added!");
+    } else if (idx > -1 && newCart[idx].quantity === newCart[idx].stock) {
+      // Show a unsuccess message
+      toast.error("Product is out of stock!");
     } else {
       const u_product = { ...product, quantity: 1 };
       newCart.push(u_product);
+      // Show a success message
+      toast.success("Product Added!");
     }
 
-    // Show a success message
-    toast.success("Product Added!");
 
     localStorage.setItem("ucart", JSON.stringify(newCart));
     setCart(newCart);
