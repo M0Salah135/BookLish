@@ -3,6 +3,18 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
+/**
+ * This component provides the context for the cart and wishlist
+ * The cart contains the products that the user has added to the cart
+ * The wishlist contains the products that the user has added to the wishlist
+ * The functions to manipulate the cart and wishlist are also provided
+ * The functions are
+ * addToCart: adds a product to the cart
+ * removeFromCart: removes a product from the cart
+ * addToWishlist: adds a product to the wishlist
+ * removeFromWishlist: removes a product from the wishlist
+ * decreasCount: decreases the quantity of a product in the cart
+ */
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [wishlist, setWishlist] = useState([])
@@ -17,7 +29,6 @@ const CartProvider = ({ children }) => {
         localStorage.setItem("uwishlist", JSON.stringify(newWishlist));
         setWishlist(newWishlist);
       }
-    
     
       const removeFromCart = (product) => {
         const newCart = cart.filter((_product) => _product.title !== product.title);
@@ -38,7 +49,7 @@ const CartProvider = ({ children }) => {
         setCart(newCart);
       };
     
-
+    
       const decreasCount = (product) => {
         const idx = cart.findIndex((_product) => _product.title === product.title);
         const newCart = [...cart];

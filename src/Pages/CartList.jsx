@@ -9,19 +9,26 @@ import Row from 'react-bootstrap/Row';
 import CustmerNavbar from '../Component/CustmerNavbar';
 import LogCover from '../Component/LogCover';
 import { CartContext } from '../Store/CartContext';
-import './cart.css'; // Assuming your custom styles are here
+import './cart.css'; 
 
+
+/**
+ * This component displays the cart page and allows the user to manage their cart items
+ * @returns {JSX.Element}
+ */
 function CartList() {
-  
-
-  const {cart, addToCart,removeFromCart,decreasCount} = useContext(CartContext);
+  // Get the cart items and functions from the CartContext
+  const {cart, addToCart, removeFromCart, decreasCount} = useContext(CartContext);
+  // Calculate the total price of items in the cart
   const total = Math.round(cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
-
 
   return (
     <di>
+      {/* Display the navbar */}
       <CustmerNavbar />
+      {/* Show the cover */}
       <LogCover />
+      {/* Main cart page */}
       <div className="cart-page">
         <Row className="g-4">
           {/* Cart Items */}
@@ -48,6 +55,7 @@ function CartList() {
                       </div>
                     </div>
 
+                    {/* Quantity control */}
                     <div className="quantity-control d-flex align-items-center">
                       <Button
                         variant="outline-secondary"
@@ -67,6 +75,7 @@ function CartList() {
                         +
                       </Button>
                     </div>
+                    {/* Remove item button */}
                     <Button
                       variant="danger"
                       className="ms-3"
@@ -78,6 +87,7 @@ function CartList() {
                 ))}
               </ListGroup>
             </Card>
+            {/* Back to shop link */}
             <div className="mt-3">
               <a href="/" className="text-decoration-none">
                 &#8592; Back to shop
@@ -117,3 +127,4 @@ function CartList() {
 }
 
 export default CartList;
+

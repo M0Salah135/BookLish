@@ -9,6 +9,15 @@ import "../index.css"
 import CustmerNavbar from "../Component/CustmerNavbar";
 
 
+/**
+ * The login component renders a login form that allows users to login to their accounts.
+ * It uses the useAuth hook from the AuthContext to get the login function.
+ * The component also uses the useNavigate hook from react-router-dom to redirect the user to the home page after a successful login.
+ * The form data is validated using the useState hook to store the email and password values.
+ * If the user enters invalid credentials, an alert is displayed.
+ * If the user enters valid credentials, the login function is called with the user object from the data.json file.
+ * The component also renders a link to the forgot password page and a link to the sign up page.
+ */
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
