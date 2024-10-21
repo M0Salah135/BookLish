@@ -5,57 +5,61 @@ import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import CustmerNavbar from "../Component/CustmerNavbar";
 import "../Pages/BookList.css";
+import data from "../Data/data";
 
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
-
-    // Basic validation
-    if (
-      !formData.firstname ||
-      !formData.lastname ||
-      !formData.email ||
-      !formData.password
-    ) {
-      setError("All fields are required");
-      return;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
-    // Add user to data
-    const newUser = {
-      id: uuidv4(),
-      firstname: formData.firstname,
-      lastname: formData.lastname,
-      email: formData.email,
-      password: formData.password,
+  const Signup = () => {
+    const [formData, setFormData] = useState({
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-    localStorage.setItem("user", JSON.stringify(newUser));
-    setError("");
-
-    // Redirect to login page after successful signup
-    toast.success("Signup successful!");
-    navigate("/login");
-  };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setError("");
+  
+      // Basic validation
+      if (
+        !formData.firstname ||
+        !formData.lastname ||
+        !formData.email ||
+        !formData.password
+      ) {
+        setError("All fields are required");
+        return;
+      }
+  
+      if (formData.password !== formData.confirmPassword) {
+        setError("Passwords do not match");
+        return;
+      }
+  
+      // Add user to data
+  
+      
+      const newUser = {
+        id: uuidv4(),
+        firstname: formData.firstname,
+        lastname: formData.lastname,
+        email: formData.email,
+        password: formData.password,
+      };
+    
+  
+      data.users.push( newUser );
+      // Redirect to login page after successful signup
+      toast.success("Signup successful!");
+      navigate("/login");
+    };
+  
 
   return (
     <div>

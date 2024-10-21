@@ -12,7 +12,7 @@ import { CartContext } from "../Store/CartContext";
  * The properties of the book to be displayed
  * @returns {JSX.Element}
  */
-function BookCard({ title, description, price, id, imageUrl }) {
+function BookCard({ title, description, price, id, imageUrl , stock}) {
   // Get the functions to manipulate the cart and wishlist from the context
   const { addToCart, addToWishlist, removeFromWishlist, wishlist } =
     useContext(CartContext);
@@ -50,6 +50,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
                     description,
                     price,
                     id,
+                    stock,
                   };
                   // Remove the book from the wishlist
                   removeFromWishlist(productDetails);
@@ -82,6 +83,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
                     description,
                     price,
                     id,
+                    stock,
                   };
                   // Add the book to the wishlist
                   addToWishlist(productDetails);
@@ -116,6 +118,7 @@ function BookCard({ title, description, price, id, imageUrl }) {
                     description,
                     price,
                     id,
+                    stock,
                   };
                   // Add the book to the cart
                   addToCart(productDetails);
