@@ -42,3 +42,58 @@
 .relative {
     position: relative !important;
 }
+
+/* nav-responsev */ 
+
+.nav-links-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-btn {
+    font-size: 30px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* إخفاء الزر في الشاشة الكبيرة */
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        /* عرض الزر في الشاشة الصغيرة */
+    }
+
+    .nav-links-container {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        flex-direction: column;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+
+    .nav-links-container.open {
+        width: 250px;
+    }
+
+    .nav-links {
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links:hover {
+        background-color: #575757;
+    }
+}
