@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import '../index.css';
 import books from "../Data/data.json";
 import { useNavigate } from "react-router-dom";
+import { BooksContext } from "../Store/BooksContext";
 
 const SearchInputForm = ({ darkTheme }) => {
     const [query, setQuery] = useState(''); // Store the input value
     const [suggestions, setSuggestions] = useState([]); // Store filtered results
     const [showSuggestions, setShowSuggestions] = useState(false); // Control dropdown visibility
     const navigate = useNavigate();
+    const {books} = useContext(BooksContext);
 
     // Function to handle input changes and filter books
     const handleInputChange = (e) => {
@@ -16,7 +18,7 @@ const SearchInputForm = ({ darkTheme }) => {
 
         if (value.length > 0) {
             // Filter books based on the title that includes the query (case-insensitive)
-            const filteredBooks = books.books.filter(book =>
+            const filteredBooks = books.filter(book =>
                 book.title.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredBooks);
